@@ -2,13 +2,17 @@ package com.billing.app.dao;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "CRPDTA.get_invoice_fiscal_printer_ibs")
+@Entity(name = "get_invoice_fiscal_printer_ibs")
+@Table(name = "get_invoice_fiscal_printer_ibs", schema = "CRPDTA")
 @Data
 public class Bill {
-    @Id
+	@Id
+	public String ROW_NUM;
     public String DOC_NUMERO;
     public String DOC_CODIGO;
     public String CLI_NOMBRE;
