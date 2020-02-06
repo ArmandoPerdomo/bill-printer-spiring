@@ -32,6 +32,8 @@ public class Bill {
     public String DOC_DIR2;
     public String DOC_DIR3;
     public String DOC_OBS;
+    public String DOC_FILTER_TYPE;
+    public String DOC_EMPRESA;
     // Detalles
     public String MOV_TIPDOC;
     public String MOV_CODIGO;

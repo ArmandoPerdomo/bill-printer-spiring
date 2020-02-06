@@ -13,18 +13,24 @@ public class main {
     @Autowired
     BillService billService;
 
-    @RequestMapping("/")
-    List<BillDTO> allBills() {
-        return billService.all();
+    @RequestMapping(value = "/", params = {"DOC_FILTER_TYPE"})
+    List<BillDTO> allBills(
+            @RequestParam(value = "DOC_FILTER_TYPE", required = false) String DOC_FILTER_TYPE
+    ) {
+        return billService.all(DOC_FILTER_TYPE);
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.PUT, params = {"DOC_NUMBER", "DOC_TYPE", "FISCAL_NUMBER"})
+    @RequestMapping(
+            value = "/",
+            method = RequestMethod.PUT,
+            params = {"DOC_NUMBER", "DOC_TYPE", "FISCAL_NUMBER", "DOC_COMPANY"})
     Map<String, Object> execProc(
             @RequestParam("DOC_NUMBER") String DOC_NUMBER,
             @RequestParam("DOC_TYPE") String DOC_TYPE,
-            @RequestParam("FISCAL_NUMBER") String FISCAL_NUMBER
+            @RequestParam("FISCAL_NUMBER") String FISCAL_NUMBER,
+            @RequestParam("DOC_COMPANY") String DOC_COMPANY
     ){
-        return billService.execProcedure(DOC_NUMBER, DOC_TYPE, FISCAL_NUMBER);
+        return billService.execProcedure(DOC_NUMBER, DOC_TYPE, FISCAL_NUMBER, DOC_COMPANY);
     }
 
 }
