@@ -13,7 +13,7 @@ public class main {
     @Autowired
     BillService billService;
 
-    @RequestMapping(value = "/", params = {"DOC_FILTER_TYPE"})
+    @RequestMapping(value = "/")
     List<BillDTO> allBills(
             @RequestParam(value = "DOC_FILTER_TYPE", required = false) String DOC_FILTER_TYPE
     ) {

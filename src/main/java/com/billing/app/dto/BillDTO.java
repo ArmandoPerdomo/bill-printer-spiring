@@ -48,6 +48,10 @@ public class BillDTO {
     public String docDir3;
 	@JsonProperty("DOC_OBS")
     public String docObs;
+    @JsonProperty("DOC_FILTER_TYPE")
+    public String docFilterType;
+    @JsonProperty("DOC_EMPRESA")
+    public String docEmpresa;
 	@JsonProperty("LINEAS")
     public List<BillDetailDTO> lineas;
 
@@ -76,5 +80,7 @@ public class BillDTO {
         this.setDocDir2(bill.DOC_DIR2);
         this.setDocDir3(bill.DOC_DIR3);
         this.setDocObs(bill.DOC_OBS);
+        this.setDocFilterType(bill.DOC_FILTER_TYPE);
+        this.setDocEmpresa(bill.DOC_EMPRESA);
     }
 }

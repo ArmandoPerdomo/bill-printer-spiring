@@ -4,22 +4,14 @@ import com.billing.app.dao.Bill;
 import com.billing.app.dto.BillDTO;
 import com.billing.app.dto.BillDetailDTO;
 import com.billing.app.repositories.BillRepository;
-
-import org.hibernate.engine.jdbc.env.spi.SQLStateType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.SqlInOutParameter;
-import org.springframework.jdbc.core.SqlOutParameter;
-import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-
-import java.sql.SQLType;
-import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

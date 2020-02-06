@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface BillRepository extends CrudRepository<Bill, String> {
-    @Query("select b from Bill b WHERE b.DOC_FILTER_TYPE = ?1")
+    @Query(value = "SELECT b from Bill b WHERE b.DOC_FILTER_TYPE = ?1", nativeQuery = true)
     List<Bill> all(String type);
 }
