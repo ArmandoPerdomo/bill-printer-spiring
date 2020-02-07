@@ -57,7 +57,7 @@ public class BillServiceImpl implements BillService {
     public List<BillDTO> all(String DOC_FILTER_TYPE) {
         Iterable<Bill> bills;
 
-        if(DOC_FILTER_TYPE != null && DOC_FILTER_TYPE.isEmpty()){
+        if(DOC_FILTER_TYPE != null && !DOC_FILTER_TYPE.isEmpty()){
             bills = billRepository.all(DOC_FILTER_TYPE);
         }else{
             bills = billRepository.findAll();

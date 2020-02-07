@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface BillRepository extends CrudRepository<Bill, String> {
-    @Query(value = "SELECT b from Bill b WHERE b.DOC_FILTER_TYPE = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM CRPDTA.get_invoice_fiscal_printer_ibs WHERE doc_filter_type = ?1",
+            nativeQuery = true)
     List<Bill> all(String type);
 }
