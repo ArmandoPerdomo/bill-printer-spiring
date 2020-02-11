@@ -37,12 +37,12 @@ public class BillServiceImpl implements BillService {
     }
 
     @Override
-    public Map<String, Object> execProcedure(String DOC_NUMBER, String DOC_TYPE, String FISCAL_NUMBER, String DOC_COMPANY) {
+    public Map<String, Object> execProcedure(String DOC_NUMBER, String DOC_TYPE, String FISCAL_NUMBER, String DOC_EMPRESA) {
     	SqlParameterSource in = new MapSqlParameterSource()
                 .addValue("DOC_NUMBER", DOC_NUMBER)
                 .addValue("DOC_TYPE", DOC_TYPE)
                 .addValue("FISCAL_NUMBER", FISCAL_NUMBER)
-                .addValue("DOC_COMPANY", DOC_COMPANY);
+                .addValue("DOC_EMPRESA", DOC_EMPRESA);
 
         Map<String, Object> out = null;
         try {

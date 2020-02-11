@@ -6,6 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 public interface BillService {
-    Map<String, Object> execProcedure(String DOC_NUMBER, String DOC_TYPE, String FISCAL_NUMBER, String DOC_COMPANY);
+    Map<String, Object> execProcedure(String DOC_NUMBER, String DOC_TYPE, String FISCAL_NUMBER, String DOC_EMPRESA);
     List<BillDTO> all(String DOC_FILTER_TYPE);
 }

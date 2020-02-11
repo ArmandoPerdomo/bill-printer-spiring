@@ -23,14 +23,14 @@ public class main {
     @RequestMapping(
             value = "/",
             method = RequestMethod.PUT,
-            params = {"DOC_NUMBER", "DOC_TYPE", "FISCAL_NUMBER", "DOC_COMPANY"})
+            params = {"DOC_NUMBER", "DOC_TYPE", "FISCAL_NUMBER", "DOC_EMPRESA"})
     Map<String, Object> execProc(
             @RequestParam("DOC_NUMBER") String DOC_NUMBER,
             @RequestParam("DOC_TYPE") String DOC_TYPE,
             @RequestParam("FISCAL_NUMBER") String FISCAL_NUMBER,
-            @RequestParam("DOC_COMPANY") String DOC_COMPANY
+            @RequestParam("DOC_EMPRESA") String DOC_EMPRESA
     ){
-        return billService.execProcedure(DOC_NUMBER, DOC_TYPE, FISCAL_NUMBER, DOC_COMPANY);
+        return billService.execProcedure(DOC_NUMBER, DOC_TYPE, FISCAL_NUMBER, DOC_EMPRESA);
     }
 
 }
